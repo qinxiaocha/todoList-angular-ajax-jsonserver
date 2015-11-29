@@ -30,4 +30,9 @@ angular.module("todomvc")
 		var index = todos.indexOf(todo);
 		todos[index].edit = false;
 	}
+	$scope.markAll = function(allChecked){
+		todos.forEach(function(todo){
+			return todo.completed = allChecked;
+		});
+	}
 }]);
