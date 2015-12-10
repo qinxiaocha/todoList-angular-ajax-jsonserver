@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<style type="text/css">[ng-clock]{display:none;}</style>
 </head>
-<body ng-app="todomvc">
+<body ng-app="todomvc" ng-controller="myTodo">
     <ng-view/>
 
     <script type="text/ng-template" id="todomvc-index.html">
@@ -39,7 +39,9 @@
             </section>
         </section>
     </script>
-
+    <div>
+        {{data}}
+    </div>
     <script src="node_modules/angular/angular.js"></script>
     <script src="node_modules/angular-route/angular-route.js"></script>
     <script src="node_modules/angular-resource/angular-resource.js"></script>

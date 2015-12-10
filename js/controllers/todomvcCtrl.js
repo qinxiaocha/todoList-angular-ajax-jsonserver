@@ -1,6 +1,6 @@
 angular.module("todomvc")
 .controller("TodoCtrl",["$scope","$routeParams","$filter",function($scope,$routeParams,$filter){
-	var todos = $scope.todos = [];
+	var todos = $scope.todos;
 
 	$scope.newTodo = '';
 	$scope.editedTodo = null;
