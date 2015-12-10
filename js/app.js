@@ -7,6 +7,7 @@ angular.module('todomvc', ["ngRoute","ngResource"])
   .otherwise({redirectTo: '/'});
 }])
 .controller('myTodo',['$scope','$http',function($scope,$http){
+<<<<<<< HEAD
 	$http.get("http://localhost:3000/db").then(function(data){
 		$scope.todos = data;
 	});
@@ -14,3 +15,9 @@ angular.module('todomvc', ["ngRoute","ngResource"])
 		$scope.todos = data;
 	});
 }]);
+=======
+	$http.get("../routes.json").then(function(data){
+		$scope.data = data;
+	});
+}];;
+>>>>>>> 4cde3ee9635701befa5f36675e7c1b2b4072cc79
