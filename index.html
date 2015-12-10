@@ -14,7 +14,6 @@
         <section id="todoapp">
             <header id="header">
                 <h1>App note</h1>
-                <span>Double click to edit a note!</span>
                 <form id="todo-form" ng-submit="addTodo()">
                     <input id="new-todo" placeholder="What needs to be done?" ng-model="newTodo" ng-disabled="saving" autoFocus/>
                 </form>
@@ -34,6 +33,9 @@
                         </form>
                     </li>
                 </ul>
+            </section>
+            <section ng-show="todos.length">
+                <span>Double click to edit a note!</span>
             </section>
         </section>
     </script>
