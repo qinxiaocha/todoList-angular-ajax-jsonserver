@@ -3,26 +3,32 @@
     {
       "id": 1,
       "title": "Begin to Learn English",
-      "conpleted": false,
+      "completed": false,
       "edit": false
     },
     {
       "id": 2,
       "title": "AngularJs",
-      "conpleted": false,
+      "completed": false,
       "edit": false
     },
     {
       "id": 3,
       "title": "Html",
-      "conpleted": false,
+      "completed": false,
       "edit": false
     },
     {
       "id": 4,
       "title": "CSS",
-      "conpleted": false,
+      "completed": false,
       "edit": false
+    },
+    {
+      "title": "JQuer",
+      "completed": false,
+      "edit": false,
+      "id": 5
     }
   ]
 }

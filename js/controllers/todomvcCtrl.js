@@ -22,7 +22,7 @@ function createXHR(){
 }
 
 var ajax = {
-    get: function(scope, url, cb) {
+    get: function(url, cb) {
         var xhr = new createXHR()
          
         xhr.onreadystatechange = function(){
@@ -39,7 +39,7 @@ var ajax = {
          xhr.send(null);
 
     },
-    post: function (scope, url) {
+    post: function (url,data,cb) {
         var xhr = new createXHR()
          
         xhr.onreadystatechange = function(){
@@ -52,8 +52,14 @@ var ajax = {
                 }
             }
         }
-         xhr.open('post', url, true);
-         xhr.send(null);
+        xhr.open('post', url, true);
+        xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+        var arr = []
+        for(var k in data){
+            arr.push(k+"="+(data[k]).toString())
+        }
+
+        xhr.send(arr.join('&'));
     }
 }
 
@@ -62,7 +68,7 @@ angular.module("todomvc")
 
     $scope.todos=[];
 
-    ajax.get($scope, 'http://localhost:3000/db', function(data) {
+    ajax.get('http://localhost:3000/db', function(data) {
         $scope.todos = data.list;
     });
 
@@ -81,13 +87,16 @@ angular.module("todomvc")
         if(!newTodo.length){
             return;
         }
-        $scope.todos.push({
-            title:newTodo,
-            completed:false,
+
+        var postData = {
+            "title":newTodo,
+            "completed":false,
             edit:false
-        });
+        };
+        console.log(postData);
+        $scope.todos.push(postData);
 
-
+        ajax.post('http://localhost:3000/list',postData);
 
         $scope.newTodo = '';
     }
