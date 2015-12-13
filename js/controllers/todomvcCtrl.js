@@ -1,38 +1,110 @@
+function createXHR(){
+    if(typeof XMLHttpRequest != 'undefined'){
+        return new XMLHttpRequest();
+    } else if(typeof ACtiveXObject != 'undefined'){
+        if (typeof arguments.callee.activeXString != 'string') {
+            var versions = ['MSXML2.XMLHttp.6.0','MSXML2.XMLHttp.3.0','MSXML2.XMLHttp'],
+                i,len;
+            for(i = 0,len = versions.length; i<len;i++){
+                try{
+                    new ActiveXObject(versions[i]);
+                    arguments.callee.activeXString = versions[i];
+                    break;
+                }catch(ex){
+
+                }
+            }
+        }
+        return new ActiveXObject(arguments.callee.activeXString);
+    }else{
+        throw new Error('No XHR object available.');
+    }
+}
+
+var ajax = {
+    get: function(scope, url, cb) {
+        var xhr = new createXHR()
+         
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if((xhr.status >= 200 && xhr.status <300) || xhr.status == 304){
+                    var data = JSON.parse(xhr.responseText);
+                    cb&&cb(data)
+                }else{
+                    console.log('Request was unsuccessful' + xhr.status);
+                }
+            }
+        }
+         xhr.open('get', url, true);
+         xhr.send(null);
+
+    },
+    post: function (scope, url) {
+        var xhr = new createXHR()
+         
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if((xhr.status >= 200 && xhr.status <300) || xhr.status == 304){
+                    var data = JSON.parse(xhr.responseText);
+                    cb&&cb(data)
+                }else{
+                    console.log('Request was unsuccessful' + xhr.status);
+                }
+            }
+        }
+         xhr.open('post', url, true);
+         xhr.send(null);
+    }
+}
+
 angular.module("todomvc")
 .controller("TodoCtrl",["$scope","$routeParams","$filter",function($scope,$routeParams,$filter){
-	var todos = $scope.todos;
 
-	$scope.newTodo = '';
-	$scope.editedTodo = null;
+    $scope.todos=[];
 
-	$scope.$watch('todos',function(){});
+    ajax.get($scope, 'http://localhost:3000/db', function(data) {
+        $scope.todos = data.list;
+    });
 
-	$scope.addTodo = function(){
-		var newTodo = $scope.newTodo.trim();
-		if(!newTodo.length){
-			return;
-		}
-		todos.push({
-			title:newTodo,
-			completed:false,
-			edit:false
-		});
-		$scope.newTodo = '';
-	}
-	$scope.removeTodo = function(todo){
-		todos.splice(todos.indexOf(todo),1);
-	}
-	$scope.editTodo = function(todo){
-		var index = todos.indexOf(todo);
-		todos[index].edit = true;
-	}
-	$scope.saveEdits = function(todo){
-		var index = todos.indexOf(todo);
-		todos[index].edit = false;
-	}
-	$scope.markAll = function(allChecked){
-		todos.forEach(function(todo){
-			return todo.completed = allChecked;
-		});
-	}
+
+    // $http.get("http://localhost:3000/db").then(function(data){
+ //     $scope.todos = data;
+ //    }).error(function(data){
+ //     console.log('Request is not function');
+ //    });
+
+    $scope.newTodo = '';
+    $scope.editedTodo = null;
+
+    $scope.addTodo = function(){
+        var newTodo = $scope.newTodo.trim();
+        if(!newTodo.length){
+            return;
+        }
+        $scope.todos.push({
+            title:newTodo,
+            completed:false,
+            edit:false
+        });
+
+
+
+        $scope.newTodo = '';
+    }
+    $scope.removeTodo = function(todo){
+        $scope.todos.splice($scope.todos.indexOf(todo),1);
+    }
+    $scope.editTodo = function(todo){
+        var index = $scope.todos.indexOf(todo);
+        $scope.todos[index].edit = true;
+    }
+    $scope.saveEdits = function(todo){
+        var index = $scope.todos.indexOf(todo);
+        $scope.todos[index].edit = false;
+    }
+    $scope.markAll = function(allChecked){
+        $scope.todos.forEach(function(todo){
+            return todo.completed = allChecked;
+        });
+    }
 }]);
