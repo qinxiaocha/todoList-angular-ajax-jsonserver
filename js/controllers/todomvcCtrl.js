@@ -29,7 +29,7 @@ var ajax = {
             if(xhr.readyState == 4){
                 if((xhr.status >= 200 && xhr.status <300) || xhr.status == 304){
                     var data = JSON.parse(xhr.responseText);
-                    cb&&cb(data)
+                    cb&&cb(data);
                 }else{
                     console.log('Request was unsuccessful' + xhr.status);
                 }
@@ -40,13 +40,13 @@ var ajax = {
 
     },
     post: function (url,data,cb) {
-        var xhr = new createXHR()
+        var xhr = new createXHR();
          
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4){
                 if((xhr.status >= 200 && xhr.status <300) || xhr.status == 304){
                     var data = JSON.parse(xhr.responseText);
-                    cb&&cb(data)
+                    cb&&cb(data);
                 }else{
                     console.log('Request was unsuccessful' + xhr.status);
                 }
@@ -54,12 +54,28 @@ var ajax = {
         }
         xhr.open('post', url, true);
         xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+
         var arr = []
         for(var k in data){
             arr.push(k+"="+(data[k]).toString())
         }
 
         xhr.send(arr.join('&'));
+    },
+    delete: function(url,id){
+        var xhr = new createXHR();
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                if((xhr.status >= 200 && xhr.status <300) || xhr.status == 304){
+                    var data = JSON.parse(xhr.responseText);
+                    cb&&cb(data);
+                }else{
+                    console.log('Request was unsuccessful' + xhr.status);
+                }
+            }
+        }
+        xhr.open('post', url, true);
+        xhr.delete(url+id);
     }
 }
 
@@ -102,6 +118,7 @@ angular.module("todomvc")
     }
     $scope.removeTodo = function(todo){
         $scope.todos.splice($scope.todos.indexOf(todo),1);
+        ajax.delete();
     }
     $scope.editTodo = function(todo){
         var index = $scope.todos.indexOf(todo);
