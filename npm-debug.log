@@ -1,0 +1,267 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'json-server',
+1 verbose cli   '-g' ]
+2 info using npm@2.14.4
+3 info using node@v4.1.2
+4 verbose install initial load of C:\Users\Fenglei_Qin\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\Fenglei_Qin\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'json-server', null ]
+7 verbose cache add spec json-server
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'json-server',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'json-server',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed json-server@*
+10 verbose addNamed "*" is a valid semver range for json-server
+11 silly addNameRange { name: 'json-server', range: '*', hasData: false }
+12 silly mapToRegistry name json-server
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/json-server
+16 verbose addNameRange registry:https://registry.npmjs.org/json-server not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/json-server
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 2:19:02 PM
+20 verbose request id 1377ec109d1bf600
+21 verbose etag "6KI684P2SX3BTKIBQ0P7YID15"
+22 http request GET https://registry.npmjs.org/json-server
+23 http 304 https://registry.npmjs.org/json-server
+24 silly get cb [ 304,
+24 silly get   { date: 'Mon, 14 Dec 2015 06:19:03 GMT',
+24 silly get     via: '1.1 varnish',
+24 silly get     'cache-control': 'max-age=300',
+24 silly get     etag: '"6KI684P2SX3BTKIBQ0P7YID15"',
+24 silly get     age: '293',
+24 silly get     connection: 'keep-alive',
+24 silly get     'x-served-by': 'cache-hkg6827-HKG',
+24 silly get     'x-cache': 'HIT',
+24 silly get     'x-cache-hits': '1',
+24 silly get     'x-timer': 'S1450073943.022775,VS0,VE0',
+24 silly get     vary: 'Accept' } ]
+25 verbose etag https://registry.npmjs.org/json-server from cache
+26 verbose get saving json-server to C:\Users\Fenglei_Qin\AppData\Roaming\npm-cache\registry.npmjs.org\json-server\.cache.json
+27 silly addNameRange number 2 { name: 'json-server', range: '*', hasData: true }
+28 silly addNameRange versions [ 'json-server',
+28 silly addNameRange   [ '0.0.0',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.3.1',
+28 silly addNameRange     '0.3.2',
+28 silly addNameRange     '0.3.3',
+28 silly addNameRange     '0.3.4',
+28 silly addNameRange     '0.3.5',
+28 silly addNameRange     '0.3.6',
+28 silly addNameRange     '0.3.7',
+28 silly addNameRange     '0.3.8',
+28 silly addNameRange     '0.3.9',
+28 silly addNameRange     '0.3.10',
+28 silly addNameRange     '0.3.11',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.5.1',
+28 silly addNameRange     '0.5.2',
+28 silly addNameRange     '0.5.4',
+28 silly addNameRange     '0.5.5',
+28 silly addNameRange     '0.5.6',
+28 silly addNameRange     '0.5.7',
+28 silly addNameRange     '0.5.8',
+28 silly addNameRange     '0.5.9',
+28 silly addNameRange     '0.5.10',
+28 silly addNameRange     '0.5.11',
+28 silly addNameRange     '0.5.12',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.2',
+28 silly addNameRange     '0.6.3',
+28 silly addNameRange     '0.6.4',
+28 silly addNameRange     '0.6.5',
+28 silly addNameRange     '0.6.6',
+28 silly addNameRange     '0.6.7',
+28 silly addNameRange     '0.6.8',
+28 silly addNameRange     '0.6.9',
+28 silly addNameRange     '0.6.10',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.7.3',
+28 silly addNameRange     '0.7.4',
+28 silly addNameRange     '0.7.5',
+28 silly addNameRange     '0.7.6',
+28 silly addNameRange     '0.7.7',
+28 silly addNameRange     '0.7.8',
+28 silly addNameRange     '0.7.9',
+28 silly addNameRange     '0.7.10',
+28 silly addNameRange     '0.7.11',
+28 silly addNameRange     '0.7.12',
+28 silly addNameRange     '0.7.13',
+28 silly addNameRange     '0.7.14',
+28 silly addNameRange     '0.7.15',
+28 silly addNameRange     '0.7.16',
+28 silly addNameRange     '0.7.17',
+28 silly addNameRange     '0.7.18',
+28 silly addNameRange     '0.7.19',
+28 silly addNameRange     '0.7.20',
+28 silly addNameRange     '0.7.21',
+28 silly addNameRange     '0.7.23',
+28 silly addNameRange     '0.7.24',
+28 silly addNameRange     '0.7.25',
+28 silly addNameRange     '0.7.26',
+28 silly addNameRange     '0.7.27',
+28 silly addNameRange     '0.7.28',
+28 silly addNameRange     '0.8.0',
+28 silly addNameRange     '0.8.1',
+28 silly addNameRange     '0.8.2',
+28 silly addNameRange     '0.8.3',
+28 silly addNameRange     '0.8.4' ] ]
+29 silly addNamed json-server@0.8.4
+30 verbose addNamed "0.8.4" is a plain semver version for json-server
+31 silly cache afterAdd json-server@0.8.4
+32 verbose afterAdd C:\Users\Fenglei_Qin\AppData\Roaming\npm-cache\json-server\0.8.4\package\package.json not in flight; writing
+33 verbose afterAdd C:\Users\Fenglei_Qin\AppData\Roaming\npm-cache\json-server\0.8.4\package\package.json written
+34 silly install resolved [ { name: 'json-server',
+34 silly install resolved     version: '0.8.4',
+34 silly install resolved     description: 'Serves JSON files through REST routes.',
+34 silly install resolved     main: './src/server/index.js',
+34 silly install resolved     bin: { 'json-server': './bin/index.js' },
+34 silly install resolved     directories: { test: 'test' },
+34 silly install resolved     dependencies:
+34 silly install resolved      { 'body-parser': '^1.8.1',
+34 silly install resolved        chalk: '^0.4.0',
+34 silly install resolved        'connect-pause': '^0.1.0',
+34 silly install resolved        cors: '^2.3.0',
+34 silly install resolved        errorhandler: '^1.2.0',
+34 silly install resolved        express: '^4.9.5',
+34 silly install resolved        got: '^3.3.0',
+34 silly install resolved        lodash: '^3.9.2',
+34 silly install resolved        lowdb: '^0.10.0',
+34 silly install resolved        'method-override': '^2.1.2',
+34 silly install resolved        morgan: '^1.3.1',
+34 silly install resolved        'node-uuid': '^1.4.2',
+34 silly install resolved        'object-assign': '^4.0.1',
+34 silly install resolved        pluralize: '^1.1.2',
+34 silly install resolved        'underscore-db': '^0.9.1',
+34 silly install resolved        'update-notifier': '^0.5.0',
+34 silly install resolved        yargs: '^3.10.0' },
+34 silly install resolved     devDependencies:
+34 silly install resolved      { husky: '^0.6.1',
+34 silly install resolved        mocha: '^2.2.4',
+34 silly install resolved        rimraf: '^2.4.1',
+34 silly install resolved        'server-ready': '^0.2.0',
+34 silly install resolved        standard: '^3.8.0',
+34 silly install resolved        supertest: '~0.8.1' },
+34 silly install resolved     scripts:
+34 silly install resolved      { test: 'npm run test:cli && npm run test:server && standard',
+34 silly install resolved        'test:cli': 'NODE_ENV=test mocha -R spec test/cli/*.js',
+34 silly install resolved        'test:server': 'NODE_ENV=test mocha -R spec test/server/*.js',
+34 silly install resolved        start: 'node bin',
+34 silly install resolved        prepush: 'npm t' },
+34 silly install resolved     repository:
+34 silly install resolved      { type: 'git',
+34 silly install resolved        url: 'git://github.com/typicode/json-server.git' },
+34 silly install resolved     keywords:
+34 silly install resolved      [ 'JSON',
+34 silly install resolved        'server',
+34 silly install resolved        'fake',
+34 silly install resolved        'REST',
+34 silly install resolved        'API',
+34 silly install resolved        'prototyping',
+34 silly install resolved        'mock',
+34 silly install resolved        'mocking',
+34 silly install resolved        'test',
+34 silly install resolved        'testing',
+34 silly install resolved        'rest',
+34 silly install resolved        'data',
+34 silly install resolved        'dummy',
+34 silly install resolved        'sandbox' ],
+34 silly install resolved     author: { name: 'Typicode', email: 'typicode@gmail.com' },
+34 silly install resolved     license: 'MIT',
+34 silly install resolved     bugs: { url: 'https://github.com/typicode/json-server/issues' },
+34 silly install resolved     homepage: 'https://github.com/typicode/json-server',
+34 silly install resolved     gitHead: 'e290cfe09070506f1f5d8028b72d970d0aac2cd2',
+34 silly install resolved     _id: 'json-server@0.8.4',
+34 silly install resolved     _shasum: '6295558ec4a550db95f0f2f693fda4baa8884134',
+34 silly install resolved     _from: 'json-server@*',
+34 silly install resolved     _npmVersion: '3.3.12',
+34 silly install resolved     _nodeVersion: '5.2.0',
+34 silly install resolved     _npmUser: { name: 'typicode', email: 'typicode@gmail.com' },
+34 silly install resolved     dist:
+34 silly install resolved      { shasum: '6295558ec4a550db95f0f2f693fda4baa8884134',
+34 silly install resolved        tarball: 'http://registry.npmjs.org/json-server/-/json-server-0.8.4.tgz' },
+34 silly install resolved     maintainers: [ [Object] ],
+34 silly install resolved     _resolved: 'https://registry.npmjs.org/json-server/-/json-server-0.8.4.tgz',
+34 silly install resolved     readme: 'ERROR: No README data found!' } ]
+35 info install json-server@0.8.4 into C:\Users\Fenglei_Qin\AppData\Roaming\npm
+36 info installOne json-server@0.8.4
+37 verbose installOne of json-server to C:\Users\Fenglei_Qin\AppData\Roaming\npm not in flight; installing
+38 verbose lock using C:\Users\Fenglei_Qin\AppData\Roaming\npm-cache\_locks\json-server-3cc6929aa9837e6c.lock for C:\Users\Fenglei_Qin\AppData\Roaming\npm\node_modules\json-server
+39 silly install write writing json-server 0.8.4 to C:\Users\Fenglei_Qin\AppData\Roaming\npm\node_modules\json-server
+40 verbose unbuild node_modules\json-server
+41 info preuninstall json-server@0.8.4
+42 info uninstall json-server@0.8.4
+43 verbose unbuild rmStuff json-server@0.8.4 from C:\Users\Fenglei_Qin\AppData\Roaming\npm\node_modules
+44 silly gentlyRm C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server.cmd is being gently removed
+45 silly gentlyRm verifying C:\Users\Fenglei_Qin\AppData\Roaming\npm is an npm working directory
+46 silly gentlyRm containing path C:\Users\Fenglei_Qin\AppData\Roaming\npm is under npm's control, in C:\Users\Fenglei_Qin\AppData\Roaming\npm
+47 silly gentlyRm deletion target C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server.cmd is under C:\Users\Fenglei_Qin\AppData\Roaming\npm
+48 verbose gentlyRm vacuuming from C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server.cmd up to C:\Users\Fenglei_Qin\AppData\Roaming\npm
+49 silly gentlyRm C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server is being gently removed
+50 silly gentlyRm verifying C:\Users\Fenglei_Qin\AppData\Roaming\npm is an npm working directory
+51 silly gentlyRm containing path C:\Users\Fenglei_Qin\AppData\Roaming\npm is under npm's control, in C:\Users\Fenglei_Qin\AppData\Roaming\npm
+52 silly gentlyRm deletion target C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server is under C:\Users\Fenglei_Qin\AppData\Roaming\npm
+53 verbose gentlyRm vacuuming from C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server up to C:\Users\Fenglei_Qin\AppData\Roaming\npm
+54 silly vacuum-fs Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server'
+54 silly vacuum-fs     at Error (native)
+55 verbose unlock done using C:\Users\Fenglei_Qin\AppData\Roaming\npm-cache\_locks\json-server-3cc6929aa9837e6c.lock for C:\Users\Fenglei_Qin\AppData\Roaming\npm\node_modules\json-server
+56 verbose stack Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server'
+56 verbose stack     at Error (native)
+57 verbose cwd d:\MyGitHub\An-app-note
+58 error Windows_NT 6.3.9600
+59 error argv "c:\\Program Files\\nodejs\\node.exe" "c:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "json-server" "-g"
+60 error node v4.1.2
+61 error npm  v2.14.4
+62 error path C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server
+63 error code EPERM
+64 error errno -4048
+65 error syscall lstat
+66 error Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server'
+66 error     at Error (native)
+66 error  { [Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server']
+66 error   errno: -4048,
+66 error   code: 'EPERM',
+66 error   syscall: 'lstat',
+66 error   path: 'C:\\Users\\Fenglei_Qin\\AppData\\Roaming\\npm\\json-server' }
+67 error Please try running this command again as root/Administrator.
+68 verbose exit [ -4048, true ]
+69 verbose unbuild node_modules\json-server
+70 info preuninstall json-server@0.8.4
+71 info uninstall json-server@0.8.4
+72 verbose unbuild rmStuff json-server@0.8.4 from C:\Users\Fenglei_Qin\AppData\Roaming\npm\node_modules
+73 silly gentlyRm C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server.cmd is being gently removed
+74 silly gentlyRm verifying C:\Users\Fenglei_Qin\AppData\Roaming\npm is an npm working directory
+75 silly gentlyRm containing path C:\Users\Fenglei_Qin\AppData\Roaming\npm is under npm's control, in C:\Users\Fenglei_Qin\AppData\Roaming\npm
+76 silly gentlyRm deletion target C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server.cmd is under C:\Users\Fenglei_Qin\AppData\Roaming\npm
+77 verbose gentlyRm vacuuming from C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server.cmd up to C:\Users\Fenglei_Qin\AppData\Roaming\npm
+78 silly gentlyRm C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server is being gently removed
+79 silly gentlyRm verifying C:\Users\Fenglei_Qin\AppData\Roaming\npm is an npm working directory
+80 silly gentlyRm containing path C:\Users\Fenglei_Qin\AppData\Roaming\npm is under npm's control, in C:\Users\Fenglei_Qin\AppData\Roaming\npm
+81 silly gentlyRm deletion target C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server is under C:\Users\Fenglei_Qin\AppData\Roaming\npm
+82 verbose gentlyRm vacuuming from C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server up to C:\Users\Fenglei_Qin\AppData\Roaming\npm
+83 silly vacuum-fs Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server'
+83 silly vacuum-fs     at Error (native)
+84 error error rolling back Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server'
+84 error error rolling back     at Error (native)
+84 error error rolling back  { [Error: EPERM: operation not permitted, lstat 'C:\Users\Fenglei_Qin\AppData\Roaming\npm\json-server']
+84 error error rolling back   errno: -4048,
+84 error error rolling back   code: 'EPERM',
+84 error error rolling back   syscall: 'lstat',
+84 error error rolling back   path: 'C:\\Users\\Fenglei_Qin\\AppData\\Roaming\\npm\\json-server' }
